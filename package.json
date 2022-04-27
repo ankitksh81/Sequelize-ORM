@@ -1,0 +1,25 @@
+{
+  "name": "sequalize-orm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankitksh81/Sequelize-ORM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankitksh81/Sequelize-ORM/issues"
+  },
+  "homepage": "https://github.com/ankitksh81/Sequelize-ORM#readme",
+  "dependencies": {
+    "express": "^4.18.0",
+    "sequelize": "^6.19.0",
+    "sqlite3": "^5.0.5"
+  }
+}
