@@ -13,13 +13,25 @@ const connection = new Sequelize('db', 'user', 'pass', {
 
 // User model
 const User = connection.define('User', {
+    uuid: {
+        type: Sequelize.UUID,
+        primaryKey: true,
+        defaultValue: Sequelize.UUIDV4
+    },
     name: Sequelize.STRING,
     bio: Sequelize.TEXT
 })
 
 connection
     .sync({
-        logging: console.log
+        logging: console.log,
+        force: true
+    })
+    .then(() => {
+        User.create({
+            name: 'Joe',
+            bio: 'New bio entry'
+        })
     })
     .then(() => {
         console.log('Connection to database established successfully.');
